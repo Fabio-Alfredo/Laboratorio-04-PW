@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+#users-container{
+    height: 70vh;
+}
+#users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#saludo {
+  background-color: rebeccapurple;
+  color: #fff;
+  padding: 2rem;
+  height: 30vh;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+#saludo.small {
+  transform: scale(0.8);
+}
+
+#card {
+  width: 100%;
+  max-width: 15rem;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  margin: 1rem;
+  list-style: none;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: move 1s infinite;
+}
+
+a::before {
+  content: "";
+  display: inline-block;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #fff;
+}
+
+@keyframes move {
+  0% {
+    left: 3rem;
+  }
+  50% {
+    left: 2rem;
+  }
+  100% {
+    left: 3rem;
+  }
+}

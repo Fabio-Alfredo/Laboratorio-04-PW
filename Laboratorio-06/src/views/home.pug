@@ -1,0 +1,24 @@
+doctype html
+html
+  
+  head
+    title User Information
+  style  
+    include home.css
+
+
+  body
+    div.container#saludo
+      h1  👋 Hello, #{user.name }
+      a(href="/") 
+      p Your last name is: #[strong #{user.lastname}]
+      p Your email is: #[strong #{user.email}]
+
+    div.container#users-container
+      h2 All Users
+      ul#users
+        each u in users
+          div#card
+            li #{u.name} - #{u.lastname}    
+    
+
